@@ -1,0 +1,28 @@
+interface Bike {
+    void offer();
+    default void details() {
+        System.out.println("Bike: 150cc, Gear");
+    }
+}
+
+interface Scooty {
+    void offer();
+    default void details() {
+        System.out.println("Scooty: 110cc, Gearless");
+    }
+}
+
+class BuySomething implements Bike, Scooty {
+    public void offer() {
+        System.out.println("Special 10% Festive Discount");
+    }
+    public void details() {
+        Bike.super.details();
+        Scooty.super.details();
+    }
+    public static void main(String[] args) {
+        BuySomething b = new BuySomething();
+        b.offer();
+        b.details();
+    }
+}
