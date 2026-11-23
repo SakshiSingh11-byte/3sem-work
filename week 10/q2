@@ -1,0 +1,29 @@
+class Edible {
+    static class Fruit {
+        static void fruitDetails() {
+            System.out.println("Fruit: Mango, Sweet");
+        }
+        void fruitPackaging() {
+            System.out.println("Fruit packed in box.");
+        }
+    }
+
+    static class Vegetable {
+        static void vegetableDetails() {
+            System.out.println("Vegetable: Potato, Fresh");
+        }
+        void vegetablePackaging() {
+            System.out.println("Vegetable packed in bag.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Edible.Fruit.fruitDetails();
+        Edible.Fruit f = new Edible.Fruit();
+        f.fruitPackaging();
+
+        Edible.Vegetable.vegetableDetails();
+        Edible.Vegetable v = new Edible.Vegetable();
+        v.vegetablePackaging();
+    }
+}
