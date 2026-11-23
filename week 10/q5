@@ -1,0 +1,19 @@
+class ObjectOriented {
+    void abstraction() { System.out.println("Abstraction concept"); }
+    void polymorphism() { System.out.println("Polymorphism concept"); }
+    void inheritance() { System.out.println("Inheritance concept"); }
+}
+
+class Cpp extends ObjectOriented {
+    void template() { System.out.println("C++ Templates"); }
+    void friendFunction() { System.out.println("C++ Friend Function"); }
+
+    public static void main(String[] args) {
+        Cpp c = new Cpp();
+        c.abstraction();
+        c.polymorphism();
+        c.inheritance();
+        c.template();
+        c.friendFunction();
+    }
+}
