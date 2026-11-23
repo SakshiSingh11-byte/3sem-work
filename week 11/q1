@@ -1,0 +1,34 @@
+interface Account {
+    void deposit();
+    void withdraw();
+    static void aboutBank() {
+        System.out.println("Welcome to National Bank");
+    }
+}
+
+class Saving implements Account {
+    public void deposit() { System.out.println("Saving Deposit"); }
+    public void withdraw() { System.out.println("Saving Withdraw"); }
+}
+
+class Current implements Account {
+    public void deposit() { System.out.println("Current Deposit"); }
+    public void withdraw() { System.out.println("Current Withdraw"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account.aboutBank();
+
+        Saving s = new Saving();
+        s.deposit();
+        s.withdraw();
+
+        Current c = new Current();
+        c.deposit();
+        c.withdraw();
+    }
+}
+
+
+
