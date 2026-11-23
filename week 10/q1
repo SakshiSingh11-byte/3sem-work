@@ -1,0 +1,31 @@
+class Person {
+    String name = "Riya", phone = "9876543210";
+
+    class Address {
+        int houseNo = 12;
+        String street = "Civil Lines", city = "Aligarh", state = "UP";
+        void displayAddr() {
+            System.out.println("Address: " + houseNo + ", " + street + ", " + city + ", " + state);
+        }
+    }
+
+    class DateOfBirth {
+        int day = 15, month = 8, year = 2004;
+        void displayDOB() {
+            System.out.println("DOB: " + day + "/" + month + "/" + year);
+        }
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Phone: " + phone);
+        Address a = new Address();
+        DateOfBirth d = new DateOfBirth();
+        a.displayAddr();
+        d.displayDOB();
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.display();
+    }
+}
