@@ -1,0 +1,27 @@
+class University {
+    String name = "AMU";
+    int ranking = 1;
+}
+
+class Faculty extends University {
+    String name = "Science";
+    void details() {
+        System.out.println("University: " + super.name + ", Ranking: " + ranking);
+        System.out.println("Faculty: " + name);
+    }
+}
+
+class Department extends Faculty {
+    String name = "Computer Science", chairman = "Dr. Khan";
+    void details() {
+        System.out.println("Department: " + name + ", Chairman: " + chairman);
+    }
+    void display() {
+        super.details();
+        details();
+    }
+    public static void main(String[] args) {
+        Department d = new Department();
+        d.display();
+    }
+}
