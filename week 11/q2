@@ -1,0 +1,39 @@
+interface Account {
+    void deposit();
+    void withdraw();
+    static void aboutBank() {
+        System.out.println("Welcome to National Bank");
+    }
+    default void takeLoan() {
+        System.out.println("Default Loan Facility");
+    }
+}
+
+class Saving implements Account {
+    public void deposit() { System.out.println("Saving Deposit"); }
+    public void withdraw() { System.out.println("Saving Withdraw"); }
+    // प्रश्न के अनुसार takeLoan() केवल Saving class में implement किया गया है
+    public void takeLoan() {
+        System.out.println("Saving Account Loan Approved");
+    }
+}
+
+class Current implements Account {
+    public void deposit() { System.out.println("Current Deposit"); }
+    public void withdraw() { System.out.println("Current Withdraw"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account.aboutBank();
+
+        Saving s = new Saving();
+        s.deposit();
+        s.withdraw();
+        s.takeLoan();
+
+        Current c = new Current();
+        c.deposit();
+        c.withdraw();
+    }
+}
